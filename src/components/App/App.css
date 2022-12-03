@@ -1,0 +1,17 @@
+@import url(../../vendor/normalize.css);
+@import url(../../vendor/font.css);
+
+.page{
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #2A2C2F;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: #FFFFFF;
+}
