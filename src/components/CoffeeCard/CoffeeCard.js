@@ -3,7 +3,7 @@ import './CoffeeCard.css';
 
 function CoffeeCard(props) {
   return(
-    <arcticle className="content__card">
+    <article className="content__card">
       <img
         className="content__card-pic"
         src={props.picture}
@@ -13,7 +13,7 @@ function CoffeeCard(props) {
         <h2 className="content__card-header">{props.title}</h2>
         <p className="content__card-text">{props.text}</p>
       </div>
-    </arcticle>
+    </article>
   );
 }
 

@@ -4,16 +4,18 @@ import './ChooseBoxItem.css';
 function ChooseBoxItem(props) {
   return(
     <div className="content__choose-item">
-      <label htmlFor="coffee" className="choose-label">
-        <p className="choose-label__icon">Co</p>
-        <p className="choose-label__text">Coffee</p>
+      <label htmlFor={props.name} className="choose-label">
+        <p className="choose-label__icon">{props.icon}</p>
+        <p className="choose-label__text">{props.name}</p>
       </label>
       <input
         className="content__flag"
         type="checkbox"
         name="ingredient"
-        id="coffee"
-        value="Coffee"
+        id={props.name}
+        value={props.name}
+        checked={props.checkedState[props.index]}
+        onChange={() => props.onChange(props.index)}
       />
     </div>
   );

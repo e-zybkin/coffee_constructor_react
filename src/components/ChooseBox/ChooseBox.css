@@ -3,41 +3,6 @@
   min-height: 280px;
   display: grid;
   grid-template-columns: repeat(4, 312px);
+  grid-template-rows:repeat(auto, 56px);
   margin: 48px auto 28px auto;
-}
-
-.content__choose-column {
-  display: flex;
-  flex-direction: column;
-  max-width: 312px;
-}
-
-.content__choose-item {
-  display: flex;
-  justify-content: space-between;
-}
-
-.content__flag {
-  margin: 16px 24px 16px 0;
-  width: 24px;
-  height: 24px;
-}
-
-.choose-label {
-  display: flex;
-}
-
-.choose-label__icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 8px 16px;
-  border-radius: 50%;
-  background-color: #4F378B;
-}
-
-.choose-label__text {
-  padding-top: 3px;
 }
