@@ -11,10 +11,16 @@ function App() {
     new Array(initialCheckBoxes.length).fill(false)
   );
 
-  /*
-    нужно создать useEffect, который будет реагировать на handleOnChange и менять cards
-    придумать алгоритм, запрещающий использовать ингридиенты, не дающие комбинаций
-  */
+  React.useEffect(() => {
+    let test = [];
+    coffeeType.forEach((item) => {
+      let isEqual = JSON.stringify(item.ingredients) === JSON.stringify(components);
+      if(isEqual) {
+        test.push(item)
+      }
+    });
+    setCards(cards.concat(test));
+  },[components])
 
   const handleOnChange = (position) => {
     const updatedIsBoxCheck = isBoxCheck.map((item, i) =>
@@ -23,36 +29,17 @@ function App() {
     setIsBoxCheck(updatedIsBoxCheck);
 
     if(updatedIsBoxCheck[position] === true) {
-      const initElement = (element) => element == initialCheckBoxes[position].name;
+      const initElement = (element) => element === initialCheckBoxes[position].name;
       if(components.findIndex(initElement) < 0){
-        components.push(initialCheckBoxes[position].name)
-        console.log(components)
+        setComponents([...components, initialCheckBoxes[position].name])
       }
-
-      cards.length = 0;
-
-      coffeeType.forEach((item) => {
-        let isEqual = JSON.stringify(item.ingredients) === JSON.stringify(components);
-        if(isEqual) {
-          cards.push(item)
-        }
-      });
-
+      setCards([]);
     } else if (updatedIsBoxCheck[position] === false){
-      const delElement = (element) => element == initialCheckBoxes[position].name;
+      const delElement = (element) => element === initialCheckBoxes[position].name;
       if(components.findIndex(delElement) >= 0) {
-        components.splice(components.findIndex(delElement), 1);
-        console.log(components)
+        setComponents((state) => state.filter((c) => c !== initialCheckBoxes[position].name));
       }
-
-      cards.length = 0;
-
-      coffeeType.forEach((item) => {
-        let isEqual = JSON.stringify(item.ingredients) === JSON.stringify(components);
-        if(isEqual) {
-          cards.push(item)
-        }
-      });
+      setCards([])
     }
   }
 
