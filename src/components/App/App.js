@@ -21,20 +21,18 @@ function App() {
           if(components.every( e => item.ingredients.includes(e))) {
             testAnother = arrayUnique(testAnother.concat(item.ingredients))
           }
-        } else if (components.length === 0) {
-          initialCheckBoxes.forEach((anotherItem, index) => {
-            if(item.ingredients.includes(anotherItem.name) === false){
-              anotherItem.status = false;
-            }
-          })
-        }
 
-        if(components.length > 0) {
           initialCheckBoxes.forEach((anotherItem, index) => {
             if(testAnother.includes(anotherItem.name)){
               anotherItem.status = false;
             } else {
               anotherItem.status = true;
+            }
+          })
+        } else if (components.length === 0) {
+          initialCheckBoxes.forEach((anotherItem, index) => {
+            if(item.ingredients.includes(anotherItem.name) === false){
+              anotherItem.status = false;
             }
           })
         }
