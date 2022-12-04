@@ -2,73 +2,91 @@ export const initialCheckBoxes = [
   {
     icon: 'Co',
     name: 'Coffee',
+    status: false,
   },
   {
     icon: '1E',
-    name: '1oz Espresso'
+    name: '1oz Espresso',
+    status: false,
   },
   {
     icon: 'Fo',
-    name: 'Foamed milk'
+    name: 'Foamed milk',
+    status: false,
   },
   {
     icon: 'Ic',
-    name: 'Ice cream'
+    name: 'Ice cream',
+    status: false,
   },
   {
     icon: 'Cr',
-    name: 'Cream'
+    name: 'Cream',
+    status: false,
   },
   {
     icon: 'Es',
-    name: 'Espresso'
+    name: 'Espresso',
+    status: false,
   },
   {
     icon: '2E',
-    name: '2oz Espresso'
+    name: '2oz Espresso',
+    status: false,
   },
   {
     icon: 'Tr',
-    name: 'Traditional'
+    name: 'Traditional',
+    status: false,
   },
   {
     icon: 'Sw',
-    name: 'Sweet'
+    name: 'Sweet',
+    status: false,
   },
   {
     icon: 'Pa',
-    name: 'Panela'
+    name: 'Panela',
+    status: false,
   },
   {
     icon: 'St',
-    name: 'Steamed Milk'
+    name: 'Steamed Milk',
+    status: false,
   },
   {
     icon: 'Lo',
-    name: 'Long pulled espresso'
+    name: 'Long pulled espresso',
+    status: false,
   },
   {
     icon: 'Ch',
-    name: 'Chocolate'
+    name: 'Chocolate',
+    status: false,
   },
   {
     icon: 'Su',
-    name: 'Sugar'
+    name: 'Sugar',
+    status: false,
   },
   {
     icon: 'Hw',
-    name: 'Hot Water'
+    name: 'Hot Water',
+    status: false,
   },
   {
     icon: '1S',
-    name: '1oz Steamed Milk'
+    name: '1oz Steamed Milk',
+    status: false,
   },
   {
     icon: 'Sh',
-    name: 'Short pulled espresso'
+    name: 'Short pulled espresso',
+    status: false,
   },
   {
     icon: 'Wh',
-    name: 'Whiskey'
+    name: 'Whiskey',
+    status: false,
   },
 ]

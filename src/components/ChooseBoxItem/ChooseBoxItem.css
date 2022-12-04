@@ -21,9 +21,17 @@
   justify-content: center;
   margin: 8px 16px;
   border-radius: 50%;
-  background-color: #4F378B;
 }
 
 .choose-label__text {
   padding-top: 3px;
 }
+
+.choose-label__icon_type_enabled {
+  background-color: #4F378B;
+}
+
+.choose-label__icon_type_disabled {
+  background-color: #c92323;
+}
+

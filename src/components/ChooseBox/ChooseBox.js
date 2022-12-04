@@ -11,6 +11,7 @@ function ChooseBox(props) {
           index={i}
           icon={box.icon}
           name={box.name}
+          status={box.status}
           onChange={props.onChangeBox}
           checkedState={props.checkedState}
         />
